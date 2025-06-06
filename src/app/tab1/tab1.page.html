@@ -1,17 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="container">
+  <h1>Datos Personales</h1>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <img [src]="fotoUrl" alt="Foto 2x2" class="foto" />
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  <div class="info">
+    <p><strong>Nombre:</strong> {{ nombre }}</p>
+    <p><strong>Apellido:</strong> {{ apellido }}</p>
+    <p><strong>Correo:</strong> {{ correo }}</p>
+  </div>
+</div>

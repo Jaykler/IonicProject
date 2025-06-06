@@ -10,6 +10,13 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
 })
 export class Tab2Page {
 
-  constructor() {}
+  titulo = "La Sumadora";
+  operandoA:number = 0;
+  operandoB:number = 0;
+  resultado:number = 0;
+
+  onSumar():void {
+    this.resultado = this.operandoA + this.operandoB;
+  }
 
 }

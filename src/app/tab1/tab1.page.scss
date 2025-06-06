@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  margin-top: 40px;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .foto {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #888;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .info {
+    margin-top: 25px;
+    font-size: 18px;
+
+    p {
+      margin: 8px 0;
+      color: #444;
+
+      strong {
+        color: #222;
+      }
+    }
+  }
+}
