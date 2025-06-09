@@ -11,13 +11,13 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['tab1.page.scss'],
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent,CommonModule,FormsModule],
   
-  
 })
 export class Tab1Page {
-  
-  fotoUrl: string = 'assets/foto.jpg'; // O usa una URL externa si prefieres
+
+  fotoUrl: string = 'assets/Hilda-Hospital-202586.jpg'; // O usa una URL externa si prefieres
   nombre: string = 'Hilda';
   apellido: string = 'Jimenez';
+  matricula: string = '2023-0269';
   correo: string = 'julyme10@hotmail.com';
 }
 
