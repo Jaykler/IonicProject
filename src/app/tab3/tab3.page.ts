@@ -17,11 +17,9 @@ export class Tab3Page {
   unidades = ['', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve'];
   decenas = ['', 'diez', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
   especiales = [
-    'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis',
-    'diecisiete', 'dieciocho', 'diecinueve'
+    'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve'
   ];
-  centenas = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos',
-              'setecientos', 'ochocientos', 'novecientos'];
+  centenas = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
 
   traducir() {
     this.resultado = this.numeroALetras(this.numero);
