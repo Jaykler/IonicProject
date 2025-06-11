@@ -1,39 +1,22 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent,IonItem,IonLabel, IonInput } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent,IonItem,IonLabel, IonInput,IonCardContent,IonCardTitle,IonCard,IonButton,IonCardHeader } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { FormsModule } from '@angular/forms';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, FormsModule,IonItem,IonLabel, IonInput ],
- 
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent, IonItem, IonLabel, IonInput, IonCardContent, IonCardTitle, IonCard, IonButton, IonCardHeader,FormsModule],
 })
 export class Tab2Page {
+  numero1: number = 0;
+  numero2: number = 0;
+  resultado: number | null = null;
 
-  titulo = "La Sumadora";
-  operandoA:number = 0;
-  operandoB:number = 0;
-  resultado:number = 0;
-
-  onNumero1Change(event: any): void {
-    this.operandoA = event.target.value;
+  sumar() {
+    console.log("Operando A: " + this.numero1);
+    console.log("Operando B: " + this.numero2);
+    return this.resultado = this.numero1 + this.numero2;
   }
-
-  onNumero2Change(event: any): void {
-    this.operandoB = event.target.value;
-  }
-
-  onSumar():void {
-    this.resultado = this.operandoA + this.operandoB;
-  }
-
-  consoleLog(): void {
-    console.log("Operando A: " + this.operandoA);
-    console.log("Operando B: " + this.operandoB);
-    console.log("Resultado: " + this.resultado);
-  }
-
 }

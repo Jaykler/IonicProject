@@ -1,4 +1,4 @@
-  <ion-header [translucent]="true">
+<ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Tab 2
@@ -12,50 +12,36 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
-  <div class="container">
-    <div style="text-align:center">
-      <h1>Aplicación: {{ titulo }}</h1>
-    </div>
 
-    <form>
-      <div class="form-group">
-        <label for="operandoA">OperandoA:</label>
-        <input
-          type="number"
-          class="form-control"
-          id="operandoA"
-          name="operandoA"
-          placeholder="Escribe operando A"
-          [(ngModel)]="operandoA"
-        />
-      </div>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Sumadora</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-      <div class="form-group">
-        <label for="operandoB">OperandoB:</label>
-        <input
-          type="number"
-          class="form-control"
-          id="operandoB"
-          name="operandoB"
-          placeholder="Escribe operando B"
-          [(ngModel)]="operandoB"
-        />
-      </div>
+  <ion-content class="ion-padding">
+    <ion-item>
+      <ion-label position="floating">Número 1</ion-label>
+      <ion-input type="number" [(ngModel)]="numero1"></ion-input>
+    </ion-item>
 
-      <button type="submit" class="btn btn-primary" (click)="onSumar()">
-        Sumar
-      </button>
-    </form>
-      <p>Resultado: {{operandoA}} + {{operandoB}} = {{ resultado }}</p>
-  </div>
+    <ion-item>
+      <ion-label position="floating">Número 2</ion-label>
+      <ion-input type="number" [(ngModel)]="numero2"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Número 1</ion-label>
-    <ion-input
-      type="number"
-      (ionInput)="onNumero1Change($event)"
-      inputmode="decimal">
-    </ion-input>
-  </ion-item>
-  
+    <ion-button expand="full" (click)="sumar()">Sumar</ion-button>
+
+    <ion-card>
+      
+        <ion-card-header>
+          <ion-card-title>Resultado de la Suma</ion-card-title>
+        </ion-card-header>
+      <ion-card-content>
+        {{ numero1 }} + {{ numero2 }} = <strong>{{ resultado }}</strong>
+      </ion-card-content>
+      
+    </ion-card>
+  </ion-content>
 </ion-content>
+

@@ -15,33 +15,17 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>Sumadora</ion-title>
+      <ion-title>Traductor de Números</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content class="ion-padding">
     <ion-item>
-      <ion-label position="floating">Número 1</ion-label>
-      <ion-input type="number" [(ngModel)]="numero1"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Número 2</ion-label>
-      <ion-input type="number" [(ngModel)]="numero2"></ion-input>
-    </ion-item>
-
-    <ion-button expand="full" (click)="sumar()">Sumar</ion-button>
-
-    <ion-card>
-      
-        <ion-card-header>
-          <ion-card-title>Resultado de la Suma</ion-card-title>
-        </ion-card-header>
-      <ion-card-content>
-        {{ numero1 }} + {{ numero2 }} = <strong>{{ resultado }}</strong>
-      </ion-card-content>
-      
-    </ion-card>
+      <ion-label position="floating">Número (1-1000)</ion-label>
+    <ion-input type="number" [(ngModel)]="numero"></ion-input>
+  </ion-item>
+    <ion-button expand="full" (click)="traducir()">Traducir</ion-button>
+    <h2 *ngIf="resultado">{{ resultado }}</h2>
   </ion-content>
 </ion-content>
 
